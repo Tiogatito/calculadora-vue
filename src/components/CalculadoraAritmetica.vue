@@ -26,10 +26,10 @@ const expressao = computed(() => {
                 </div>
                 <div class="campo">
                     <label for="segundo-numero">Segundo número</label>
-                    <input id="segundo-numero" v-model.number="estado.segundoNumero" type="number" step="any" placeholder="Ex.: 4" aria-describedby="dica-numeros erro-divisao" :aria-invalid="estado.operacao === 'divisao' && estado.segundoNumero === 0" />
+                    <input id="segundo-numero" v-model.number="estado.segundoNumero" type="number" step="any" placeholder="Ex.: 4" :aria-describedby="estado.operacao === 'divisao' && estado.segundoNumero === 0 ? 'dica-numeros erro-divisao' : 'dica-numeros'" :aria-invalid="estado.operacao === 'divisao' && estado.segundoNumero === 0" />
                 </div>
             </div>
-            <p id="dica-numeros" class="calculadora__dica">Números positivos, negativos ou decimais.</p>
+            <p id="dica-numeros" class="calculadora__dica">Aceita negativos. Para decimais, use o separador do seu navegador: em português, vírgula (ex.: 2,5).</p>
             <div class="campo campo--operacao">
                 <label for="operacao">Operação</label>
                 <select id="operacao" v-model="estado.operacao">

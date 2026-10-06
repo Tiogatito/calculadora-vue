@@ -35,6 +35,7 @@ O template utiliza interpolação `{{ }}`, `v-for` com `:key` nas operações, `
 ## Comportamento
 
 - Aceita números positivos, negativos, zero e decimais.
+- Os campos são do tipo `number`, com `step="any"`. O separador decimal da entrada acompanha a configuração regional do navegador; em português, utilize vírgula, como em `2,5`.
 - Um campo vazio pede o preenchimento dos dois números.
 - Divisão por zero apresenta uma mensagem clara e destaca o divisor.
 - Valores ou resultados não finitos apresentam erro em vez de `NaN` ou `Infinity`.
