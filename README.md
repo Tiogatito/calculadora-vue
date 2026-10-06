@@ -12,7 +12,7 @@ Exercício do módulo 27 do curso Profissão: Engenheiro Front-end.
 
 ## Executar
 
-Requisitos: Node.js 22.12 ou superior e npm.
+Requisitos: Node.js 24 e npm.
 
 ```sh
 npm ci
