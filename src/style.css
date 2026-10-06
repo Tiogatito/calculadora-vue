@@ -1,0 +1,50 @@
+:root {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+    --color-background: #f1f6f3;
+    --color-card: #ffffff;
+    --color-text: #18372f;
+    --color-muted: #52665e;
+    --color-primary: #14594d;
+    --color-on-primary: #ffffff;
+    --color-result-muted: #c7e5d7;
+    --color-border: #d3e0d8;
+    --color-control-border: #87998e;
+    --color-input: #fafcfb;
+    --color-error: #9c2525;
+    --color-error-bg: #fff2f0;
+    --color-error-border: #d99e96;
+    color: var(--color-text);
+    background: var(--color-background);
+    line-height: 1.5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; }
+:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 4px; }
+.pagina { max-width: 1160px; min-height: 100svh; margin: 0 auto; padding: 0 40px; display: flex; flex-direction: column; }
+.cabecalho { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 32px 0; border-bottom: 1px solid var(--color-border); }
+.marca { display: flex; align-items: center; font-size: 26px; line-height: 1; font-weight: 700; letter-spacing: -0.05em; }
+.marca__icone { display: grid; place-items: center; margin-right: 10px; width: 36px; height: 36px; border-radius: 10px; background: var(--color-primary); color: var(--color-on-primary); font: 28px var(--font-mono); }
+.marca__ponto { color: var(--color-primary); }
+.cabecalho__descricao { font-size: 13px; color: var(--color-muted); }
+.principal { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: 72px; flex: 1; padding: 64px 0; }
+.etiqueta { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; margin: 0 0 24px; color: var(--color-primary); }
+.etiqueta span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+h1 { font-size: clamp(40px, 4.5vw, 60px); line-height: 1.12; letter-spacing: -0.055em; font-weight: 600; margin: 0 0 24px; }
+h1 span { color: var(--color-primary); }
+.apresentacao__texto { max-width: 320px; margin: 0; color: var(--color-muted); font-size: 17px; }
+.operacoes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; list-style: none; margin: 36px 0; padding: 0; max-width: 320px; }
+.operacoes li { display: flex; align-items: center; gap: 12px; font-size: 13px; }
+.operacoes li span { width: 32px; height: 32px; display: grid; place-items: center; font: 22px var(--font-mono); border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-primary); }
+.apresentacao__nota { margin: 0; padding-left: 16px; border-left: 2px solid var(--color-primary); color: var(--color-muted); font-size: 13px; }
+.area-calculadora { scroll-margin-top: 24px; }
+.rodape { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 24px 0; border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: 12px; }
+.pular-conteudo { position: absolute; top: 12px; left: 12px; z-index: 2; padding: 12px 16px; color: var(--color-on-primary); background: var(--color-primary); transform: translateY(-180%); border-radius: 8px; }
+.pular-conteudo:focus { transform: translateY(0); }
+@media (max-width: 900px) { .pagina { padding: 0 28px; } .principal { gap: 32px; } h1 { font-size: 44px; } }
+@media (max-width: 700px) { .pagina { padding: 0 20px; } .cabecalho { padding: 24px 0; } .principal { grid-template-columns: 1fr; padding: 40px 0; gap: 32px; } h1 { font-size: 44px; margin-bottom: 16px; } .apresentacao__texto { max-width: 450px; font-size: 16px; } .etiqueta { margin-bottom: 16px; } .operacoes { grid-template-columns: repeat(4, 1fr); max-width: none; margin: 24px 0; gap: 8px; } .operacoes li { flex-direction: column; gap: 6px; font-size: 11px; } .apresentacao__nota { font-size: 12px; } .rodape { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 380px) { .cabecalho__descricao { max-width: 110px; text-align: right; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
